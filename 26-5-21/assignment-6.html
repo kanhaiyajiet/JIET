@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>calculator</title>
+ <link rel="stylesheet" href="assignment-6.css">
+<link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<div class="wrap">
+      <fieldset class="container">
+            <form name="calculator">
+ 
+                  <input id="display" type="text" name="display" readonly>
+ 
+                  <input class="button digits" type="button" value="7" onclick="calculator.display.value += '7'">
+                  <input class="button digits" type="button" value="8" onclick="calculator.display.value += '8'">
+                  <input class="button digits" type="button" value="9" onclick="calculator.display.value += '9'">
+                  <input class="button mathButtons" type="button" value="+" onclick="calculator.display.value += ' + '">
+                  <br>
+                  <input class="button digits" type="button" value="4" onclick="calculator.display.value += '4'">
+                  <input class="button digits" type="button" value="5" onclick="calculator.display.value += '5'">
+                  <input class="button digits" type="button" value="6" onclick="calculator.display.value += '6'">
+                  <input class="button mathButtons" type="button" value="-" onclick="calculator.display.value += ' - '">
+                  <br>
+                  <input class="button digits" type="button" value="1" onclick="calculator.display.value += '1'">
+                  <input class="button digits" type="button" value="2" onclick="calculator.display.value += '2'">
+                  <input class="button digits" type="button" value="3" onclick="calculator.display.value += '3'">
+                  <input class="button mathButtons" type="button" value="x" onclick="calculator.display.value += ' * '">
+                  <br>
+                  <input id="clearButton" class="button" type="button" value="C" onclick="calculator.display.value = ''">
+                  <input class="button digits" type="button" value="0" onclick="calculator.display.value += '0'">
+                  <input class="button mathButtons" type="button" value="=" onclick="calculator.display.value = eval(calculator.display.value)">
+                  <input class="button mathButtons" type="button" value="/" onclick="calculator.display.value += ' / '">
+            </form>
+      </fieldset>
+</div>
+</body>
+</html>
+<html>
+    <!DOCTYPE html>
+<html>
+<head>
+ <title>timer</title>
+</head>
+<body>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<center>
+<table style="border:1px solid black;text-align:center;">
+ <tr style="font-size:60px;">
+  <td id="days"><center>00</center></td>
+  <td id="hours"><center>00</center></td>
+  <td id="min"><center>00</center></td>
+  <td id="sec"><center>00</center></td>
+ </tr>
+ <tr>
+  <td><center> &ensp;&ensp;&ensp;&ensp;Days &ensp;&ensp;&ensp;&ensp;</center></td>
+  <td><center> &ensp;&ensp;&ensp;&ensp;Hours &ensp;&ensp;&ensp;&ensp;</center></td>
+  <td><center> &ensp;&ensp;&ensp;&ensp;Minutes &ensp;&ensp;&ensp;&ensp;</center></td>
+  <td><center> &ensp;&ensp;&ensp;&ensp;Seconds &ensp;&ensp;&ensp;&ensp;</center></td> 
+ </tr>
+</table>
+
+</center>
+
+<script type="text/javascript">
+ var x = new Date();
+ var y = x.getTime();
+ var total = y + (3*24*3600000);
+ function count()
+ {
+  var now = new Date();
+  var currentTime = now.getTime();
+  
+   var diff = total - currentTime;
+   var s = Math.floor(diff/1000);
+   var m = Math.floor(s/60);
+   var h = Math.floor(m/60);
+   var d = Math.floor(h/24);
+ 
+  h=h%24;
+  m=m%60;
+  s=s%60;
+
+  h=(h<10)?"0"+h:h;
+  m=(m<10)?"0"+m:m;
+  s=(s<10)?"0"+s:s;
+  d=(d<10)?"0"+d:d;  
+  
+  document.getElementById("days").innerHTML=d;
+  document.getElementById("hours").innerHTML= h;
+  document.getElementById("min").innerHTML= m;
+  document.getElementById("sec").innerHTML= s;
+  setTimeout(count,1000);
+ }
+ count();
+</script>
+</body>
+</html>
+</html>
+    
