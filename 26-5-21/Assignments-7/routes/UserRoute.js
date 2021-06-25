@@ -1,5 +1,5 @@
 const express = require("express");
-const User = require("..//models/User");
+const User = require("../models/User");
 const router = express();
 
 router.post("/signup", (req, res) => {
@@ -22,7 +22,7 @@ router.post("/signup", (req, res) => {
 
 router.post("/login", (req, res) => {
   let { email, password } = req.body;
-  User.findone({ email: email })
+  User.findOne({ email: email })
    .then((user) => {
      console.log(user);  
      console.info(`User with email: ${email} was successfully found`);
