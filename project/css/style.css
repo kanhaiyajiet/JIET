@@ -47,7 +47,12 @@ html{
 #navbar ul li{ 
     list-style: none;
     font-size: 1.3rem;
+    /* display: inline-block; */
 }
+
+/* nav ul li ul li{
+    left: auto;
+} */
 
 #navbar ul li a{
     color: white;
@@ -55,6 +60,7 @@ html{
     padding: 3px 22px;
     border-radius: 20px;
     text-decoration: none;
+    
 }
 
 #navbar ul li a:hover{
