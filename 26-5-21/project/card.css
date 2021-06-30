@@ -1,0 +1,22 @@
+.card {
+    width: 350px;
+    margin-right: 50px;
+    margin-top: 70px;
+    margin-left: 100px;
+    border: 3px black solid;
+    display: inline-block; 
+    box-shadow: 4px 4px 20px;
+ } 
+ 
+ .title {
+ font-size: 30px;
+ text-align: center;
+ font-family:cursive;
+ color: rgba(223, 119, 33, 0.9)
+ }
+ 
+ .cardbody{
+ padding: 5px 10px;
+ font-family: cursive;
+ font-size: 17px;
+ }
